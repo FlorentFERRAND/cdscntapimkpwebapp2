@@ -299,7 +299,9 @@ C:\Projects\cdscntapimkpwebapp2\Models\OfferManager\SubmitOfferPackageRequest.cs
 C:\Projects\cdscntapimkpwebapp2\Models\OrderManager\CreateRefundVoucherMessage.cs
 C:\Projects\cdscntapimkpwebapp2\Models\OrderManager\CreateRefundVoucherRequest.cs
 C:\Projects\cdscntapimkpwebapp2\Models\OrderManager\GetOrderListMessage.cs
+C:\Projects\cdscntapimkpwebapp2\Models\OrderManager\GetOrderListMessageCSVFile.cs
 C:\Projects\cdscntapimkpwebapp2\Models\OrderManager\GetOrderListRequest.cs
+C:\Projects\cdscntapimkpwebapp2\Models\OrderManager\GetOrderListRequestCSVFile.cs
 C:\Projects\cdscntapimkpwebapp2\Models\OrderManager\ManageParcelMessage.cs
 C:\Projects\cdscntapimkpwebapp2\Models\OrderManager\ManageParcelRequest.cs
 C:\Projects\cdscntapimkpwebapp2\Models\OrderManager\ValidateOrderListRequest.cs

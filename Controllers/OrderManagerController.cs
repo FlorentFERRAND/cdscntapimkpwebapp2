@@ -116,5 +116,28 @@ namespace cdscntapimkpwebapp1.Controllers
             return View(new GetOrderListMessage(MyRequest));
         }
 
+
+
+        public ActionResult GetOrderListRequestCSVFile()
+        {
+            Request MyRequest = new GetOrderListRequestCSVFile();
+            /*   if (HttpContext.Session.GetString(SessionToken) != null)
+               {
+                   MyRequest._Login = HttpContext.Session.GetString(SessionLogin);
+                   MyRequest._Token = HttpContext.Session.GetString(SessionToken);
+                   MyRequest._EnvironmentSelected = (EnvironmentEnum)Enum.Parse(typeof(EnvironmentEnum), HttpContext.Session.GetString(SessionEnvironment));
+               }*/
+            return View(MyRequest);
+        }
+        [HttpPost]
+        public ActionResult GetOrderListMessageCSVFile(GetOrderListRequestCSVFile MyRequest)
+        {
+
+            MyRequest.GetHeaderMessage();
+            SetSessionData(MyRequest);
+            return View(new GetOrderListMessageCSVFile(MyRequest));
+        }
+
+
     }
 }

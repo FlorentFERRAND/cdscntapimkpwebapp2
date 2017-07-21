@@ -68,6 +68,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Order manager<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("GetOrderList", "GetOrderListRequest", "OrderManager")</li>
+                            <li>@Html.ActionLink("GetOrderListCSVFile", "GetOrderListRequestCSVFile", "OrderManager")</li>
                             <li>@Html.ActionLink("ValidateOrderList", "ValidateOrderListRequest", "OrderManager")</li>
                             <li>@Html.ActionLink("CreateRefundVoucher", "CreateRefundVoucherRequest", "OrderManager")</li>
                             <li>@Html.ActionLink("ManageParcel", "ManageParcelRequest", "OrderManager")</li>
