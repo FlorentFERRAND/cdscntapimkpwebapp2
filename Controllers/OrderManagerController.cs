@@ -121,7 +121,7 @@ namespace cdscntapimkpwebapp1.Controllers
         public ActionResult GetOrderListRequestCSVFile()
         {
             Request MyRequest = new GetOrderListRequestCSVFile();
-            /*   if (HttpContext.Session.GetString(SessionToken) != null)
+            /*if (HttpContext.Session.GetString(SessionToken) != null)
                {
                    MyRequest._Login = HttpContext.Session.GetString(SessionLogin);
                    MyRequest._Token = HttpContext.Session.GetString(SessionToken);
@@ -132,10 +132,23 @@ namespace cdscntapimkpwebapp1.Controllers
         [HttpPost]
         public ActionResult GetOrderListMessageCSVFile(GetOrderListRequestCSVFile MyRequest)
         {
-
             MyRequest.GetHeaderMessage();
             SetSessionData(MyRequest);
             return View(new GetOrderListMessageCSVFile(MyRequest));
+        }
+        
+        private void UploadButton(object sender, EventArgs e)
+        {
+            string str = null;
+            string[] strArr = null;
+            int count = 0;
+            str = "Welcome to CSharp split test scenario";
+            char[] splitchar = { ' ' };
+            strArr = str.Split(splitchar);
+            for (count = 0; count <= strArr.Length - 1; count++)
+            {
+                Console.WriteLine(strArr[count]);
+            }
         }
 
 

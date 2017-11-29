@@ -1,12 +1,15 @@
 ﻿using System.Threading.Tasks;
 using CdscntMkpApiReference_Prod;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace cdscntapimkpwebapp1.Models.OrderManager
 {
     public class GetOrderListMessage: Message
         {
             public Task<OrderListMessage> _OrderListMessage { get; set; }
+
+            public List<OrderStateEnum> orderStatesEnum { get; set; }
 
             public GetOrderListMessage(GetOrderListRequest MyRequest)
             {
@@ -19,13 +22,15 @@ namespace cdscntapimkpwebapp1.Models.OrderManager
                 _MessageXML = _RequestInterceptor.LastResponseXML;
             }
 
-        public GetOrderListMessage()
-        {
-            _Environment = Enumeration.EnvironmentEnum.Preproduction;
+            public GetOrderListMessage()
+            {
+                _Environment = Enumeration.EnvironmentEnum.Preproduction;
+
+            }
+
+            
 
         }
-
-    }
     }
 
 

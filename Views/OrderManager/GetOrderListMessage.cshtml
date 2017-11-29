@@ -7,7 +7,6 @@
     ViewData["Title"] = "GetOrderListMessage";
 }
 
-
 @using (Html.BeginForm("ValidateOrderListRequest", "OrderManager", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
 
@@ -53,6 +52,7 @@
                             <th>OrderNumber</th>
                             <th>OrderState</th>
                             <th>OrderLineList</th>
+                            <th>Order States filter</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -74,10 +74,13 @@
                                 </td>
                             </tr>
                         }
+                        <tr>
+                            <td>
+                                @Html.DropDownListFor(m => m.orderStatesEnum, new MultiSelectList(Enum.GetValues(typeof(OrderStatesEnum))), new { @Multiple = "multiple", @class = "form-control" })
+                            </td>
+                        </tr>
                     </tbody>
-
-
-</table>
+                </table>
             </div>
         </div>
 

@@ -24,8 +24,5 @@ namespace cdscntapimkpwebapp1.Models.OrderManager
             _Environment = Enumeration.EnvironmentEnum.Preproduction;
 
         }
-
     }
 }
-
-

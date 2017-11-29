@@ -10,7 +10,6 @@
 
 @using (Html.BeginForm("GetOrderListMessage", "OrderManager", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
-
     <br />
     <br />
     <h2>GetOrderList</h2>
@@ -39,8 +38,7 @@
                             <label for="token"><span class="glyphicon glyphicon-qrcode"></span> Environment</label>
                             <br />
                             <p class="nav navbar-nav navbar-left">
-                                @Html.DropDownListFor(m => m._EnvironmentSelected, new SelectList(Enum.GetValues(typeof(EnvironmentEnum))),
-                    "Select Environment")
+                                @Html.DropDownListFor(m => m._EnvironmentSelected, new SelectList(Enum.GetValues(typeof(EnvironmentEnum))), "Select Environment")
                             </p>
                             <br />
                         </div>
