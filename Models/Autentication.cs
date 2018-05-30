@@ -38,7 +38,6 @@ namespace cdscntapimkpwebapp1.Models
                 {
                     svcIssue = "https://sts.cdiscount.com/users/httpIssue.svc";
                     realm = "https://wsvc.cdiscount.com/MarketplaceAPIService.svc";
-
                 }
                 else {
 
